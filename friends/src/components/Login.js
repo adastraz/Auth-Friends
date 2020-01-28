@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 
-const Login = () => {
+const Login = props => {
     const [user, setUser] = useState({
         username: '',
         password: ''
@@ -36,8 +36,8 @@ const Login = () => {
                 value={user.password}
                 placeholder='password'
                 onChange={(e => handleChanges(e))}
-            />
-            <button>Login</button>
+                />
+                <button>Login</button>
             </form>
         </div>
     )
